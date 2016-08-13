@@ -1,0 +1,30 @@
+<div class="row" ng-hide="contact._id">
+  <div class="col-md-6">
+      
+  </div>
+</div>
+<div class="container">
+  <div>
+    <p>
+      <label>Pincode</label> 
+      <input id="pincode" class="form-control" type="text" ng-model="contact.firstName" required> 
+    </p>
+    <p>
+      <label>Limit</label> 
+      <input id="limit" class="form-control" type="text" ng-model="contact.lastName" required> 
+    </p>
+    <p>
+      <button style="margin-top:20px" onclick="myFunction()" class="btn btn-default" >Find</button>
+    </p>
+  </div>
+</div>
+
+<script>
+function myFunction(){
+var pin = document.getElementById("pincode").value;
+var limi = document.getElementById("limit").value;
+console.log(pin);
+
+window.open("http://localhost:3000/allData" +"/"+ pin + "/" + limi);
+}
+</script>
